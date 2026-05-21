@@ -353,17 +353,29 @@ if menu == "🏠 Dashboard":
         m_fire = int(df_live[df_live['Tambur'] == m][df_live.columns.intersection(fire_cols)].sum().sum()) if not df_live.empty else 0
         m_progress = min(float(m_fiili / v['hedef']), 1.0) if v['hedef'] > 0 else 0.0
 
-        # O tambura ait son ürün kodu
+        # O tambura ait son kayıt
         m_df = df_live[df_live['Tambur'] == m] if not df_live.empty else pd.DataFrame()
         son_kod = m_df.iloc[-1]['Kod'] if not m_df.empty else "-"
         son_musteri = m_df.iloc[-1]['Müşteri'] if not m_df.empty else "-"
+        # Operatörler — önce veri girişten, yoksa vardiya planından
+        if not m_df.empty:
+            son_op1 = m_df.iloc[-1].get('Operatör 1', v.get('operatör1', '-'))
+            son_op2 = m_df.iloc[-1].get('Operatör 2', v.get('operatör2', '-'))
+            son_op3 = m_df.iloc[-1].get('Operatör 3', v.get('operatör3', '-'))
+        else:
+            son_op1 = v.get('operatör1', v.get('personel', '-'))
+            son_op2 = v.get('operatör2', '-')
+            son_op3 = v.get('operatör3', '-')
+        op_str = son_op1
+        if son_op2 and son_op2 not in ['-', 'Seçilmedi']: op_str += f" | {son_op2}"
+        if son_op3 and son_op3 not in ['-', 'Seçilmedi']: op_str += f" | {son_op3}"
 
         tamamlanma_yuzde = round(m_progress * 100, 1)
         st.markdown(f'''<div class="machine-card" style="background-color: {bg};">
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div>
                     <span style="font-size: 18px; font-weight: bold;">{m} - {v["durum"]}</span><br>
-                    <span style="font-size: 13px; opacity: 0.9;">👤 {v.get("operatör1", v.get("personel", "-"))} | {v.get("operatör2", "-")} | {v.get("operatör3", "-")}</span><br>
+                    <span style="font-size: 13px; opacity: 0.9;">👤 {op_str}</span><br>
                     <span style="font-size: 13px; opacity: 0.9;">📦 Ürün: {son_kod} | Müşteri: {son_musteri}</span>
                 </div>
                 <div style="text-align: right;">
