@@ -363,7 +363,7 @@ if menu == "🏠 Dashboard":
             <div style="display: flex; justify-content: space-between; align-items: center;">
                 <div>
                     <span style="font-size: 18px; font-weight: bold;">{m} - {v["durum"]}</span><br>
-                    <span style="font-size: 13px; opacity: 0.9;">👤 Operatör: {v["personel"]}</span><br>
+                    <span style="font-size: 13px; opacity: 0.9;">👤 {v.get("operatör1", v.get("personel", "-"))} | {v.get("operatör2", "-")} | {v.get("operatör3", "-")}</span><br>
                     <span style="font-size: 13px; opacity: 0.9;">📦 Ürün: {son_kod} | Müşteri: {son_musteri}</span>
                 </div>
                 <div style="text-align: right;">
@@ -498,11 +498,8 @@ elif menu == "📥 Veri Giriş":
             musteri_adi = st.session_state.kod_musteri_dict.get(k_secim, "Bilinmiyor")
             kesim = kesim_adetleri.get(k_secim, 1)
 
-            # time_input ile güvenli saat girişi
-            baslangic_t = c3.time_input("Üretim Başlangıç", value=datetime.strptime("08:00", "%H:%M").time(), key=f"b_{st.session_state.form_id}")
-            bitis_t = c4.time_input("Üretim Bitiş", value=now.time().replace(second=0, microsecond=0), key=f"bit_{st.session_state.form_id}")
-            baslangic = baslangic_t.strftime("%H:%M")
-            bitis = bitis_t.strftime("%H:%M")
+            baslangic = c3.text_input("Üretim Başlangıç", value="08:00", placeholder="08:00", key=f"b_{st.session_state.form_id}")
+            bitis = c4.text_input("Üretim Bitiş", value=now.strftime("%H:%M"), placeholder="16:00", key=f"bit_{st.session_state.form_id}")
 
             st.info(f"📦 Müşteri: **{musteri_adi}** | ✂️ Kesim Adeti: **{kesim}**")
 
