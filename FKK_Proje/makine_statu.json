@@ -1,25 +1,25 @@
 {
     "Tambur 1": {
-        "durum": "Çalışıyor",
-        "personel": "Adem Sekmen",
-        "operatör1": "Adem Sekmen",
-        "operatör2": "Cengiz Yılmaz",
-        "operatör3": "Coşkun Bulut",
-        "hedef": 1000,
-        "vardiya": "1. Vardiya",
-        "tarih": "21.05.2026",
-        "planlayan": "Önder Şensoy"
+        "durum": "Duruş",
+        "personel": "Seçilmedi",
+        "operatör1": "Seçilmedi",
+        "operatör2": "Seçilmedi",
+        "operatör3": "Seçilmedi",
+        "hedef": 0,
+        "vardiya": "-",
+        "tarih": "-",
+        "planlayan": "-"
     },
     "Tambur 2": {
-        "durum": "Çalışıyor",
-        "personel": "Ersin Kıllı",
-        "operatör1": "Ersin Kıllı",
-        "operatör2": "Süleyman Karaman",
-        "operatör3": "Ramazan Genç",
-        "hedef": 1500,
-        "vardiya": "1. Vardiya",
-        "tarih": "21.05.2026",
-        "planlayan": "Önder Şensoy"
+        "durum": "Duruş",
+        "personel": "Seçilmedi",
+        "operatör1": "Seçilmedi",
+        "operatör2": "Seçilmedi",
+        "operatör3": "Seçilmedi",
+        "hedef": 0,
+        "vardiya": "-",
+        "tarih": "-",
+        "planlayan": "-"
     },
     "Tambur 3": {
         "durum": "Duruş",
@@ -28,20 +28,20 @@
         "operatör2": "Seçilmedi",
         "operatör3": "Seçilmedi",
         "hedef": 0,
-        "vardiya": "1. Vardiya",
-        "tarih": "21.05.2026",
-        "planlayan": "Önder Şensoy"
+        "vardiya": "-",
+        "tarih": "-",
+        "planlayan": "-"
     },
     "Tambur 4": {
-        "durum": "Çalışıyor",
-        "personel": "Yunus Emre Arı",
-        "operatör1": "Yunus Emre Arı",
-        "operatör2": "Ufuk Uçak",
-        "operatör3": "Taha Kara",
-        "hedef": 2500,
-        "vardiya": "1. Vardiya",
-        "tarih": "21.05.2026",
-        "planlayan": "Önder Şensoy"
+        "durum": "Duruş",
+        "personel": "Seçilmedi",
+        "operatör1": "Seçilmedi",
+        "operatör2": "Seçilmedi",
+        "operatör3": "Seçilmedi",
+        "hedef": 0,
+        "vardiya": "-",
+        "tarih": "-",
+        "planlayan": "-"
     },
     "Tambur 5": {
         "durum": "Duruş",
@@ -50,8 +50,8 @@
         "operatör2": "Seçilmedi",
         "operatör3": "Seçilmedi",
         "hedef": 0,
-        "vardiya": "1. Vardiya",
-        "tarih": "21.05.2026",
-        "planlayan": "Önder Şensoy"
+        "vardiya": "-",
+        "tarih": "-",
+        "planlayan": "-"
     }
 }

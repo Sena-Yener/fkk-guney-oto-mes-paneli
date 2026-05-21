@@ -348,7 +348,7 @@ if menu == "🏠 Dashboard":
     st.markdown("---")
 
     for m, v in st.session_state.makine_verileri.items():
-        bg = "#2d5a27" if v['durum'] == "Çalışıyor" else "#8b1a1a"
+        bg = "#2d5a27" if v['durum'] == "Çalışıyor" else ("#8b1a1a" if v['durum'] == "Duruş" else "#8b5a1a")
         m_fiili = int(df_live[df_live['Tambur'] == m]['Fiili'].sum()) if not df_live.empty else 0
         m_fire = int(df_live[df_live['Tambur'] == m][df_live.columns.intersection(fire_cols)].sum().sum()) if not df_live.empty else 0
         m_progress = min(float(m_fiili / v['hedef']), 1.0) if v['hedef'] > 0 else 0.0
@@ -1082,6 +1082,25 @@ elif menu == "⚙️ Yönetim":
                 elif not onay:
                     st.warning("Lütfen onay kutusunu işaretleyin.")
                 else:
-                    st.session_state.db = []; save_data("kayitlar.json", [])
-                    st.session_state.arsiv_db = []; save_data("arsiv.json", [])
+                    st.session_state.db = []
+                    st.session_state.arsiv_db = []
+                    save_data("kayitlar.json", [])
+                    save_data("arsiv.json", [])
+                    # Makine verilerini tamamen sıfırla
+                    bos_makine = {}
+                    for i in range(1, 6):
+                        m_name = f"Tambur {i}"
+                        bos_makine[m_name] = {
+                            "durum": "Duruş",
+                            "personel": "Seçilmedi",
+                            "operatör1": "Seçilmedi",
+                            "operatör2": "Seçilmedi",
+                            "operatör3": "Seçilmedi",
+                            "hedef": 0,
+                            "vardiya": "-",
+                            "tarih": "-",
+                            "planlayan": "-"
+                        }
+                    st.session_state.makine_verileri = bos_makine
+                    save_data("makine_statu.json", bos_makine)
                     st.success("Sistem sıfırlandı."); st.rerun()
