@@ -1,0 +1,17 @@
+[
+    {
+        "Makine": "Tambur 3",
+        "Son Bakım": "2026-05-09",
+        "Sonraki Bakım": "2026-06-08"
+    },
+    {
+        "Makine": "Tambur 2",
+        "Son Bakım": "2026-05-06",
+        "Sonraki Bakım": "2026-07-05"
+    },
+    {
+        "Makine": "Tambur 4",
+        "Son Bakım": "2026-05-14",
+        "Sonraki Bakım": "2026-07-28"
+    }
+]

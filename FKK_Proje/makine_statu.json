@@ -1,0 +1,57 @@
+{
+    "Tambur 1": {
+        "durum": "Çalışıyor",
+        "personel": "Adem Sekmen",
+        "operatör1": "Adem Sekmen",
+        "operatör2": "Cengiz Yılmaz",
+        "operatör3": "Coşkun Bulut",
+        "hedef": 1000,
+        "vardiya": "1. Vardiya",
+        "tarih": "21.05.2026",
+        "planlayan": "Yunus Emre Arslan"
+    },
+    "Tambur 2": {
+        "durum": "Çalışıyor",
+        "personel": "Cumhur Kara",
+        "operatör1": "Cumhur Kara",
+        "operatör2": "Ersin Kıllı",
+        "operatör3": "Furkan Kol",
+        "hedef": 1500,
+        "vardiya": "1. Vardiya",
+        "tarih": "21.05.2026",
+        "planlayan": "Yunus Emre Arslan"
+    },
+    "Tambur 3": {
+        "durum": "Çalışıyor",
+        "personel": "Furkan Şeker",
+        "operatör1": "Furkan Şeker",
+        "operatör2": "Hüseyin Erdoğan",
+        "operatör3": "Kazım Çavuşoğlu",
+        "hedef": 2000,
+        "vardiya": "1. Vardiya",
+        "tarih": "21.05.2026",
+        "planlayan": "Yunus Emre Arslan"
+    },
+    "Tambur 4": {
+        "durum": "Çalışıyor",
+        "personel": "Ramazan Demirbilek",
+        "operatör1": "Ramazan Demirbilek",
+        "operatör2": "Ramazan Genç",
+        "operatör3": "Selvet Gayretli",
+        "hedef": 1200,
+        "vardiya": "1. Vardiya",
+        "tarih": "21.05.2026",
+        "planlayan": "Yunus Emre Arslan"
+    },
+    "Tambur 5": {
+        "durum": "Duruş",
+        "personel": "Seçilmedi",
+        "operatör1": "Seçilmedi",
+        "operatör2": "Seçilmedi",
+        "operatör3": "Seçilmedi",
+        "hedef": 0,
+        "vardiya": "1. Vardiya",
+        "tarih": "21.05.2026",
+        "planlayan": "Yunus Emre Arslan"
+    }
+}
